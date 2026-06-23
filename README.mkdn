@@ -7,7 +7,7 @@ Getting started
 ---------------
 
 ```
-repo init -u https://github.com/LegacyDroid/android_manifest.git -b lineage-18.1 --depth=1 --no-tags
+repo init -u https://github.com/LegacyDroid/android_manifest.git -b lineage-18.1 --depth=1 --no-tags --git-lfs
 repo sync --no-clone-bundle -j4
 source build/envsetup.sh
 lunch lineage_x86_64-userdebug
