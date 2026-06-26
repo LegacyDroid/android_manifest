@@ -786,6 +786,7 @@
   <project path="vendor/packages/apps/BoringdroidSettings" name="LegacyDroid/vendor_packages_apps_BoringdroidSettings" remote="legacydroid" revision="boringdroid-11.0.0" />
 
   <!-- Override device/lineage/sepolicy to track LegacyDroid fork for SELinux policy -->
+  <remove-project path="device/lineage/sepolicy" name="LineageOS/android_device_lineage_sepolicy" />
   <project path="device/lineage/sepolicy" name="LegacyDroid/android_device_lineage_sepolicy" remote="legacydroid" />
 
   <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
