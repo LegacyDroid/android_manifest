@@ -1,36 +1,31 @@
-LineageOS
+LegacyDroid
 ===========
+
+LegacyDroid is a work-in-progress custom ROM built on LineageOS 21 (Android 14), targeting the x86_64 Android emulator (lineage_sdk_phone_x86_64).
 
 Getting started
 ---------------
 
-To get started with Android/LineageOS, you'll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
+To get started with Android/LegacyDroid, you'll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
 
-To initialize your local repository using the LineageOS trees, use a command like this:
+To initialize your local repository using the LegacyDroid trees, use a command like this:
 ```
-repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
+repo init -u https://github.com/LegacyDroid/android_manifest.git -b legacydroid-14 --git-lfs
 ```
 Then to sync up:
 ```
 repo sync
 ```
-Please see the [LineageOS Wiki](https://wiki.lineageos.org/) for building instructions, by device.
 
-
-Submitting patches
-------------------
-Patches are always welcome! Please submit your patches via LineageOS Gerrit!
-
-Simply follow our guide on [how to submit patches](https://wiki.lineageos.org/submitting-patch-howto.html).
-
-To view the status of your and others' patches, visit [LineageOS Gerrit Code Review](https://review.lineageos.org/).
-
-
-Buildbot
+Building
 --------
 
-All supported devices are built weekly and periodically as changes are committed to ensure the source trees remain buildable.
-
-You can view the current build statuses at [LineageOS Buildkite](https://buildkite.com/lineageos).
-
-Builds produced weekly by the buildbot can be downloaded from [LineageOS downloads](https://download.lineageos.org/).
+Source the build environment and select the device target:
+```
+source build/envsetup.sh
+lunch lineage_sdk_phone_x86_64-ap2a-userdebug
+```
+Then build:
+```
+mka
+```
