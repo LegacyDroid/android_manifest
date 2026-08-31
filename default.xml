@@ -1340,6 +1340,10 @@
     <copyfile src="lk_inc.mk" dest="lk_inc.mk" />
   </project>
 
+  <!-- LegacyDroid LiquidGlass -->
+  <project path="frameworks/libs/shapes" name="LegacyDroid/android_frameworks_shapes" remote="legacydroid" revision="refs/heads/legacydroid-14" />
+  <project path="frameworks/libs/backdrop" name="LegacyDroid/android_frameworks_backdrop" remote="legacydroid" revision="refs/heads/legacydroid-14" />
+
   <include name="snippets/lineage.xml" />
   <include name="snippets/pixel.xml" />
 </manifest>
