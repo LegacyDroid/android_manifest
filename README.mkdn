@@ -1,31 +1,68 @@
-LegacyDroid
-===========
+# LegacyDroid
 
-LegacyDroid is a work-in-progress custom ROM built on LineageOS 21 (Android 14), targeting the x86_64 Android emulator (lineage_sdk_phone_x86_64).
+**LegacyDroid** is a custom Android ROM project based on Android 14.
 
-Getting started
----------------
+## Getting Started
 
-To get started with Android/LegacyDroid, you'll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
+### 1. Initialize the source
 
-To initialize your local repository using the LegacyDroid trees, use a command like this:
+```bash
+repo init -u https://github.com/LegacyDroid/android_manifest.git \
+    -b legacydroid-14 \
+    --git-lfs
 ```
-repo init -u https://github.com/LegacyDroid/android_manifest.git -b legacydroid-14 --git-lfs
-```
-Then to sync up:
-```
+
+### 2. Sync the source
+
+```bash
 repo sync
 ```
 
-Building
---------
+Depending on your connection and hardware, the initial sync may take a while.
 
-Source the build environment and select the device target:
+## Build Preparation
+
+### Magisk
+
+The ROM requires the latest Magisk APK at:
+
+```text
+vendor/aosproot/magisk.apk
 ```
-source build/envsetup.sh
-lunch lineage_sdk_phone_x86_64-ap2a-userdebug
+
+Download the latest Magisk APK and place it there before building.
+
+### LuminaAI Live2D
+
+LuminaAI requires additional vendor assets.
+
+Follow the setup instructions provided by:
+
+```text
+packages/apps/LuminaAI/live2d/get_vendor.sh
 ```
-Then build:
+
+Run the script and follow it tutorial before starting the build.
+
+## Building
+
+After syncing and completing the required vendor setup, follow the device-specific build instructions for your target device.
+
+---
+
+## Source
+
+Manifest:
+
+https://github.com/LegacyDroid/android_manifest
+
+Branch:
+
+```text
+legacydroid-14
 ```
-mka
-```
+
+## License
+
+Individual components of LegacyDroid may be distributed under their respective licenses.
+See the individual repositories for licensing information.
